@@ -1,15 +1,11 @@
 
-//exercici 2
-const users = [
-    { firstName: 'Homer', lastName: 'Simpson' },
-    { firstName: 'Marge', lastName: 'Simpson' },
-    { firstName: 'Bart', lastName: 'Simpson' },
-    { firstName: 'Lisa', lastName: 'Simpson' },
-    { firstName: 'Maggie', lastName: 'Simpson' }
-];
+//Exercici 3
+// Donat el següent array de strings, mostrar per consola la frase completa usant .reduce()
+// var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+// Resultat per consola: 'a long time ago in a galaxy far far away'
+// Nota: no fa falta fer un "join".
 
-const usersFirstName = users.map((user) => {
-    return user.firstName;
-});
+var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
 
-console.log(usersFirstName);
+var frase = epic.reduce((pre, next) => pre + ' ' + next);
+console.log(frase);
