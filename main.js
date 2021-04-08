@@ -1,11 +1,8 @@
+//Exercici 4
+// Crear una funció que accepti un string i retornada aquest string revertit. 
+// Nota: Usar funció fletxa (arrow functions), l'operador de prograpación (spread operator) y el mètode .reverse()
+strProva= 'Bon dia, tot bé?';
 
-//Exercici 3
-// Donat el següent array de strings, mostrar per consola la frase completa usant .reduce()
-// var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
-// Resultat per consola: 'a long time ago in a galaxy far far away'
-// Nota: no fa falta fer un "join".
+const revertit = (rev)=> [...rev].reverse().join(''); 
 
-var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
-
-var frase = epic.reduce((pre, next) => pre + ' ' + next);
-console.log(frase);
+console.log(revertit(strProva))
