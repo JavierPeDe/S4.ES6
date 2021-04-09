@@ -1,8 +1,34 @@
-//Exercici 4
-// Crear una funció que accepti un string i retornada aquest string revertit. 
-// Nota: Usar funció fletxa (arrow functions), l'operador de prograpación (spread operator) y el mètode .reverse()
-strProva= 'Bon dia, tot bé?';
+// Exercici 5
+// Modifica la funció 'a()' per a reemplaçar la promesa per aync/await:
 
-const revertit = (rev)=> [...rev].reverse().join(''); 
+// function b() {
+//    // tasques asíncrones , que triguen una estona..
+// }
 
-console.log(revertit(strProva))
+// funtion a() {
+//    // Ens esperem que la funció b acabi
+//    b().then() = > {
+//          doMoreWork();
+//    }
+// }
+
+
+function doMoreWork() {
+    console.log('do more work')
+}
+async function b() {
+   
+    //  tasques asíncrones , que triguen una estona..
+}
+
+async function a() {
+    try {
+       let c = await b();
+     
+    }
+    catch{
+        console.log('Error')
+    }
+}
+
+a().then(doMoreWork());
