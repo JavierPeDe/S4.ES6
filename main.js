@@ -1,34 +1,32 @@
-// Exercici 5
-// Modifica la funció 'a()' per a reemplaçar la promesa per aync/await:
+// Exercici 6
+// Tenim un array de tasques i volem aconseguir un array que contingui únicament els noms de les tasques. 
 
-// function b() {
-//    // tasques asíncrones , que triguen una estona..
-// }
+// - Usar .forEach() per obtenir aquest array.
 
-// funtion a() {
-//    // Ens esperem que la funció b acabi
-//    b().then() = > {
-//          doMoreWork();
-//    }
-// }
+// - Usar .map() per obtenir aquest array.
 
-
-function doMoreWork() {
-    console.log('do more work')
-}
-async function b() {
-   
-    //  tasques asíncrones , que triguen una estona..
-}
-
-async function a() {
-    try {
-       let c = await b();
-     
+var arrayF = [];
+var tasks = [
+    {
+        'name': 'Start React web',
+        'duration': 120
+    },
+    {
+        'name': 'Work out',
+        'duration': 60
+    },
+    {
+        'name': 'Procrastinate on facebook',
+        'duration': 240
     }
-    catch{
-        console.log('Error')
-    }
-}
+];
+tasks.forEach(task => {
+    arrayF.push(task.name);
+    console.log(task.name);
+});
+console.log(arrayF);
 
-a().then(doMoreWork());
+let arrayMap = tasks.map(task => {
+    return (task.name);
+})
+console.log(arrayMap);
